@@ -1,0 +1,13 @@
+; BLES00934
+; LEGO Star Wars III: The Clone Wars
+; by bucanero
+
+:GAME1
+
+[Update Checksum for GAME1 (Required)]
+;set pointer:eof-0xAE50
+;set range:0x10,pointer
+set range:0x10,0xE1BF
+set [hash]:fnv1:0xFFFFFFFF
+set [hash]:xor:FFFFFFFF
+write at 0x000C:[hash]
